@@ -22,6 +22,11 @@ function showCategory(category) {
                 <p>
                     I am a passionate and driven individual pursuing a B-Tech in Computer Science and Engineering. My goal is to leverage my technical skills and knowledge to contribute to organizational growth while staying updated with the latest technologies.
                 </p>
+                <h3>Skills</h3>
+                <ul>
+                    <li><strong>Technical Skills:</strong> C, Python, Java, HTML, CSS, Bootstrap, ReactJS, JavaScript, MySQL, Oracle, MongoDB, Power BI</li>
+                    <li><strong>Personal Skills:</strong> Adaptability, Communication, Time Management, Logical Thinking, Problem Solving, Leadership, Teamwork</li>
+                </ul>
                 <button onclick="goBack()" class="back-button">Back</button>
             `;
             break;
