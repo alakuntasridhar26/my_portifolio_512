@@ -22,6 +22,7 @@ function showCategory(category) {
                 <p>
                     I am a passionate and driven individual pursuing a B-Tech in Computer Science and Engineering. My goal is to leverage my technical skills and knowledge to contribute to organizational growth while staying updated with the latest technologies.
                 </p>
+                <button onclick="goBack()" class="back-button">Back</button>
             `;
             break;
         case 'education':
@@ -32,25 +33,7 @@ function showCategory(category) {
                     <li><strong>Intermediate (MPC)</strong> - Narayana Junior College (2020-2022) - Percentage: 93.2%</li>
                     <li><strong>Secondary School (SSC)</strong> - ABHI High School (2020) - GPA: 10.0</li>
                 </ul>
-            `;
-            break;
-        case 'skills':
-            content = `
-                <h2>Skills</h2>
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li>Programming: C, Python, Java</li>
-                    <li>Front-end: HTML, CSS, Bootstrap, ReactJS, JavaScript</li>
-                    <li>Back-end: MySQL, Oracle, MongoDB</li>
-                    <li>Tools: Power BI</li>
-                </ul>
-                <h3>Personal Skills</h3>
-                <ul>
-                    <li>Adaptability and Flexibility</li>
-                    <li>Communication and Time Management</li>
-                    <li>Logical Thinking and Problem Solving</li>
-                    <li>Leadership and Teamwork</li>
-                </ul>
+                <button onclick="goBack()" class="back-button">Back</button>
             `;
             break;
         case 'projects':
@@ -62,6 +45,7 @@ function showCategory(category) {
                         A deep learning-based project that uses Python modules to analyze foot images and detect diabetic foot ulcers. The system checks whether a patient is suffering from a foot ulcer based on the input image.
                     </p>
                 </div>
+                <button onclick="goBack()" class="back-button">Back</button>
             `;
             break;
         case 'contact':
@@ -79,6 +63,7 @@ function showCategory(category) {
                     <textarea id="message" name="message" required></textarea>
                     <button type="submit">Send</button>
                 </form>
+                <button onclick="goBack()" class="back-button">Back</button>
             `;
             break;
         default:
@@ -87,4 +72,16 @@ function showCategory(category) {
 
     // Update the content section
     contentDiv.innerHTML = content;
+}
+
+// Function to go back to the loading page
+function goBack() {
+    // Show the loading page
+    document.getElementById('loading-page').style.display = 'block';
+
+    // Hide the content section
+    document.getElementById('content').style.display = 'none';
+
+    // Reset the background color
+    document.body.className = '';
 }
